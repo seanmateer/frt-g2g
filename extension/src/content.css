@@ -1,0 +1,82 @@
+/* FRT G2G Extension Styles */
+
+.frt-g2g-btn-wrapper {
+  display: inline-flex;
+  margin-left: 8px;
+}
+
+.frt-g2g-import-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.frt-g2g-import-btn:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.frt-g2g-import-btn:active {
+  transform: translateY(0);
+}
+
+.frt-g2g-import-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.frt-g2g-import-btn.success {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.frt-g2g-import-btn.error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.frt-g2g-import-btn svg {
+  flex-shrink: 0;
+}
+
+.frt-g2g-import-btn svg.spinning {
+  animation: frt-spin 1s linear infinite;
+}
+
+@keyframes frt-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Toast notification */
+.frt-g2g-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.frt-g2g-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
